@@ -1,0 +1,26 @@
+To-Do List:
+
+    For HomePage.jsx
+        - Polish up HomePage.jsx
+            - Edit texts/phrases/sentence to more appropriate or accurate ones
+            - Decide to either keep current images used for Homepage or change them (Depends)
+
+        For Client Testimonials section inside HomePage.jsx
+            - Get usable real Client Testimonials
+            (?) Implement smooth auto rotating carousel
+
+        For Request Consultation section inside HomePage.jsx
+            - Implement email function (users can write an email within the website to send directly to the owner)
+
+        For Messenger Icon
+            - When clicked users should automatically get redirected to DRA Jewelry Shop faceboook messenger (need the https://m.me/businessname)
+
+
+        For Footer section
+            - Edit texts used to more appropriate or accurate ones
+            - Put on links for the quick links to work
+            - Polish it up
+            (?) Make footer a separate component so it can be called to multiple pages
+
+
+- Fix navbar open and close for mobile devices

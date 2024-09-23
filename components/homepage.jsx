@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     (<div className="min-h-screen bg-white text-black">
       <motion.header
-        style={{ opacity: headerOpacity }}
+        style={{ opacity: 1 }}
         className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-md shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <button className="lg:hidden z-50" onClick={toggleMenu}>
@@ -126,28 +126,28 @@ export default function HomePage() {
     </section>
 
         <section id="collections" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">Artisan's Specialties</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {specialtiesData.map((specialty, index) => (
-            <div key={specialty.name} className="group cursor-pointer">
-              <div className="relative overflow-hidden">
-                <img
-                  src={specialty.image}
-                  alt={specialty.name}
-                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white text-xl font-serif">Explore {specialty.name}</span>
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">Artisan's Specialties</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {specialtiesData.map((specialty, index) => (
+                <div key={specialty.name} className="group cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={specialty.image}
+                      alt={specialty.name}
+                      className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-white text-xl font-serif">Explore {specialty.name}</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-serif mt-4 mb-2">{specialty.name}</h3>
+                  <p className="text-gray-600">{specialty.description}</p>
                 </div>
-              </div>
-              <h3 className="text-xl font-serif mt-4 mb-2">{specialty.name}</h3>
-              <p className="text-gray-600">{specialty.description}</p>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
 
     <section id="custom-design" className="py-20 bg-black text-white overflow-hidden">
       <div className="container mx-auto px-4">
@@ -178,7 +178,7 @@ export default function HomePage() {
             <img
               src={customDesignData.image} 
               alt={customDesignData.title}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg shadow-lg mt-8 ml-2 lg:mt-0 lg:ml-0"
             />
           </motion.div>
         </div>
@@ -250,7 +250,7 @@ export default function HomePage() {
                   <textarea
                     placeholder="Tell us about your dream piece"
                     rows="4"
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold resize-none"></textarea>
                   <button
                     type="submit"
                     className="w-full bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition-colors">
@@ -335,7 +335,7 @@ export default function HomePage() {
       </footer>
       {/* Facebook Messenger Icon */}
       <a
-        href="#"
+        href="https://m.me/businessname"
         className="fixed bottom-4 right-4 z-50 bg-black rounded-full p-3 shadow-lg hover:bg-gray-800 transition-colors"
         aria-label="Contact us on Facebook Messenger">
         <MessageCircle className="w-6 h-6 text-white" />
