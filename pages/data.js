@@ -13,12 +13,12 @@ export const bannerData = {
     {
       name: 'Pendants',
       image: '../images/pendant3-dra.png', // Replace with actual path to your image
-      description: 'Discover our exquisite collection of custom necklaces.',
+      description: 'Discover our exquisite collection of custom pendatns.',
     },
     {
       name: 'Earrings',
       image: '../images/earrings3-dra.png', // Replace with actual path to your image
-      description: 'Discover our exquisite collection of custom bracelets.',
+      description: 'Discover our exquisite collection of custom earrings.',
     },
   ];
 
