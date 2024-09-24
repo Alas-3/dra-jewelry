@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown, Menu, X, MessageCircle } from 'lucide-react';
 import { bannerData, specialtiesData, customDesignData } from '../pages/data';
 import Footer from '../components/footer';
+import ConsultationForm from '../components/requestConsultation';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -169,12 +170,12 @@ export default function HomePage() {
         </motion.a>
       </div>
       <motion.div
-  animate={{ y: [0, 10, 0] }}
-  transition={{ repeat: Infinity, duration: 1.5 }}
-  className="absolute bottom-8 inset-x-0 mx-auto flex justify-center"
->
-  <ChevronDown className="w-8 h-8 text-black" />
-</motion.div>
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+        className="absolute bottom-8 inset-x-0 mx-auto flex justify-center"
+      >
+        <ChevronDown className="w-8 h-8 text-black" />
+      </motion.div>
 
     </section>
 
@@ -289,28 +290,7 @@ export default function HomePage() {
                   </li>
                 </ul>
               </div>
-              <div className="lg:w-1/2 bg-white p-8 rounded-lg shadow-xl">
-                <h3 className="text-2xl font-serif mb-6 text-black">Request a Consultation</h3>
-                <form className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold" />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold" />
-                  <textarea
-                    placeholder="Tell us about your dream piece"
-                    rows="4"
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold resize-none"></textarea>
-                  <button
-                    type="submit"
-                    className="w-full bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition-colors">
-                    Request Consultation
-                  </button>
-                </form>
-              </div>
+              <ConsultationForm />
             </div>
           </div>
         </section>

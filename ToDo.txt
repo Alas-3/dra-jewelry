@@ -9,18 +9,22 @@ To-Do List:
             - Get usable real Client Testimonials
             (?) Implement smooth auto rotating carousel
 
-        For Request Consultation section inside HomePage.jsx
+        For Request Consultation section inside HomePage.jsx (DONE)
             - Implement email function (users can write an email within the website to send directly to the owner)
+            - Put access key inside env.local file
 
-        For Messenger Icon
+        For Messenger Icon (DONE)
             - When clicked users should automatically get redirected to DRA Jewelry Shop faceboook messenger (need the https://m.me/businessname)
 
 
-        For Footer section
+        For Footer section (SEMI DONE I THINK)
             - Edit texts used to more appropriate or accurate ones
             - Put on links for the quick links to work
             - Polish it up
             (?) Make footer a separate component so it can be called to multiple pages
 
 
-- Fix navbar open and close for mobile devices
+- Fix navbar open and close for mobile devices (DONE)
+
+- Edit navbar items
+- Prep what pages and what info those pages have
