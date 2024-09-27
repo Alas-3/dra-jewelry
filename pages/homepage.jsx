@@ -1,11 +1,13 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, Menu, X, MessageCircle } from 'lucide-react';
-import { bannerData, specialtiesData, customDesignData } from '../pages/data';
+import { bannerData, specialtiesData, customDesignData } from './data';
 import Footer from '../components/footer';
 import ConsultationForm from '../components/requestConsultation';
+import AboutUs from './aboutus';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,9 +56,9 @@ export default function HomePage() {
           <nav className="hidden lg:block">
             <ul className="flex space-x-6">
               <li>
-                <a href="#collections" className="hover:text-gold transition-colors">
-                  Collections
-                </a>
+                <Link href="/" className="hover:text-gold transition-colors">
+                  Home
+                </Link>
               </li>
               <li>
                 <a href="#custom-design" className="hover:text-gold transition-colors">
@@ -64,7 +66,7 @@ export default function HomePage() {
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-gold transition-colors">
+                <a href="/aboutus" className="hover:text-gold transition-colors">
                   About Us
                 </a>
               </li>
@@ -89,13 +91,13 @@ export default function HomePage() {
           >
             <ul className="text-center space-y-8">
               <li>
-                <a
-                  href="#collections"
+                <Link
+                  href="/"
                   className="text-3xl font-serif hover:text-gold transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)} // Still closing the menu on click
                 >
-                  Collections
-                </a>
+                  Home
+                </Link>
               </li>
               <li>
                 <a
@@ -107,13 +109,13 @@ export default function HomePage() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#about"
+                <Link
+                  href="/aboutus"
                   className="text-3xl font-serif hover:text-gold transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)} // Still closing the menu on click
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a
