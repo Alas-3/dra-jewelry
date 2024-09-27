@@ -28,3 +28,8 @@ To-Do List:
 
 - Edit navbar items
 - Prep what pages and what info those pages have
+    - Prep'd about us page layout
+        - to add about us page story and also team members names and images
+        - to modify texts/words/phrases
+
+- 

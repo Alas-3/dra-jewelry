@@ -168,7 +168,7 @@ export default function AboutUs() {
                 className="lg:w-1/2 mb-8 lg:mb-0"
               >
                 <p className="text-lg mb-6">
-                  Founded in 1950, Luxe Jewels has been at the forefront of luxury jewelry craftsmanship for over seven decades. Our journey began with a simple yet profound vision: to create exquisite pieces that capture the essence of timeless elegance.
+                  Founded in 1950, DRA Jewelry Shop has been at the forefront of luxury jewelry craftsmanship for over seven decades. Our journey began with a simple yet profound vision: to create exquisite pieces that capture the essence of timeless elegance.
                 </p>
                 <p className="text-lg">
                   From our humble beginnings in a small workshop to becoming a globally recognized brand, we have never wavered from our commitment to quality, innovation, and personalized service.
@@ -225,8 +225,8 @@ export default function AboutUs() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { name: "Emma Thompson", role: "Lead Designer", image: "Emma+Thompson" },
+                { name: "Paolo Araniego", role: "The Big Boss", image: "Paolo" },
                 { name: "Michael Chen", role: "Master Craftsman", image: "Michael+Chen" },
-                { name: "Sophia Patel", role: "Gemologist", image: "Sophia+Patel" }
               ].map((member, index) => (
                 <motion.div
                   key={member.name}
@@ -286,20 +286,20 @@ export default function AboutUs() {
                   <form onSubmit={onSubmit} className="space-y-4">
                     <input
                       type="text"
-                      name="name"
+                      name="Name of Client"
                       placeholder="Your Name"
                       required
                       className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"
                     />
                     <input
                       type="email"
-                      name="email"
+                      name="Email of Client"
                       placeholder="Your Email"
                       required
                       className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"
                     />
                     <textarea
-                      name="message"
+                      name="Message"
                       placeholder="Tell us about your dream piece"
                       rows={4}
                       required

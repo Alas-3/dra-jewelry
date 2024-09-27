@@ -51,7 +51,7 @@ export default function HomePage() {
           <button className="lg:hidden z-50" onClick={toggleMenu}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-          <h1 className="text-2xl font-serif tracking-wider">DRA Jewelry</h1>
+          <h1 className="text-xl sm:text-xs md:text-2xl lg:text-2xl font-serif tracking-wider">DRA Jewelry</h1>
 
           <nav className="hidden lg:block">
             <ul className="flex space-x-6">
@@ -93,7 +93,7 @@ export default function HomePage() {
               <li>
                 <Link
                   href="/"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)} // Still closing the menu on click
                 >
                   Home
@@ -102,7 +102,7 @@ export default function HomePage() {
               <li>
                 <a
                   href="#custom-design"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Custom Design
@@ -111,7 +111,7 @@ export default function HomePage() {
               <li>
                 <Link
                   href="/aboutus"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)} // Still closing the menu on click
                 >
                   About Us
@@ -120,7 +120,7 @@ export default function HomePage() {
               <li>
                 <a
                   href="#contact"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact

@@ -35,20 +35,20 @@ export default function RequestConsultation() {
       <form onSubmit={onSubmit} className="space-y-4">
         <input
           type="text"
-          name="name"
+          name="Name of Client"
           placeholder="Your Name"
           required
           className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"
         />
         <input
           type="email"
-          name="email"
+          name="Email of Client"
           placeholder="Your Email"
           required
           className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"
         />
         <textarea
-          name="message"
+          name="Message"
           placeholder="Tell us about your dream piece"
           rows={4}
           required

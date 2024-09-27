@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -13,9 +14,9 @@ const Footer = () => {
           <div className="text-center sm:text-left col-span-1 sm:col-span-2 md:col-span-1 md:px-8 md:border-x md:border-gray-700">
             <h3 className="text-xl font-serif mb-4">Quick Links</h3>
             <ul className="text-sm space-y-2">
-              <li><a href="#collections" className="hover:text-gold transition-colors">Collections</a></li>
+              <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
               <li><a href="#custom-design" className="hover:text-gold transition-colors">Custom Design</a></li>
-              <li><a href="#about" className="hover:text-gold transition-colors">About Us</a></li>
+              <li><Link href="/aboutus" className="hover:text-gold transition-colors">About Us</Link></li>
               <li><a href="#contact" className="hover:text-gold transition-colors">Contact</a></li>
             </ul>
           </div>
