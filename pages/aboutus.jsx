@@ -225,7 +225,7 @@ export default function AboutUs() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { name: "Emma Thompson", role: "Lead Designer", image: "Emma+Thompson" },
-                { name: "Paolo Araniego", role: "The Big Boss", image: "Paolo" },
+                { name: "Paolo Araniego", role: "Boss", image: "Paolo" },
                 { name: "Michael Chen", role: "Master Craftsman", image: "Michael+Chen" },
               ].map((member, index) => (
                 <motion.div
