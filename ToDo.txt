@@ -34,4 +34,12 @@ To-Do List:
 
 - Attach links to social icons (!!)
 
+- Get screenshots of Testimonials
+- Get the people for the "Our Team" part
+
+- Screenshots and videos for a Gallery Page (?) to display previously made jewelries
+
+
+- Homepage "Start your Journey"  button when clicked should go to scroll down to the "Request a Consultation" section
+
 - (?) Improve contact page

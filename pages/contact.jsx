@@ -166,7 +166,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="text-2xl font-serif mb-4">Follow Us</h4>
                   <div className="flex space-x-4 mb-5">
-                    <a href="#" className="text-gold hover:text-gold-dark transition-colors">
+                    <a href="https://www.facebook.com/DraJewelryShop29/" className="text-gold hover:text-gold-dark transition-colors">
                       <Facebook className="w-6 h-6" />
                     </a>
                     <a href="#" className="text-gold hover:text-gold-dark transition-colors">

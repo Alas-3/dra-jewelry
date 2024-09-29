@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="text-center col-span-2 md:col-span-1 md:pl-8">
             <h3 className="text-xl font-serif mb-4">Connect With Us</h3>
             <div className="flex justify-center space-x-4">
-              <a href="#" className="text-white hover:text-gold transition-colors">
+              <a href="https://www.facebook.com/DraJewelryShop29/" className="text-white hover:text-gold transition-colors">
                 <Facebook className="w-6 h-6" />
                 <span className="sr-only">Facebook</span>
               </a>
