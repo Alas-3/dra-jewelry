@@ -69,7 +69,7 @@ export default function AboutUs() {
     (<div className="min-h-screen bg-white text-black">
       <motion.header
         style={{ opacity: 1 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-md shadow-md"
+        className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-99 backdrop-blur-md shadow-md"
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <button className="lg:hidden z-50" onClick={toggleMenu}>
@@ -95,7 +95,7 @@ export default function AboutUs() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-gold transition-colors">
+                <a href="/contact" className="hover:text-gold transition-colors">
                   Contact
                 </a>
               </li>
@@ -143,7 +143,7 @@ export default function AboutUs() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-3xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -251,7 +251,7 @@ export default function AboutUs() {
 
         <section className="py-20 bg-gradient-to-r from-gold to-gold-dark text-black">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-serif mb-8">Experience DRA Jewelry</h2>
+        <h2 className="text-3xl md:text-4xl font-serif mb-8 text-balance">Experience DRA Jewelry</h2>
         <p className="text-lg mb-8 max-w-2xl mx-auto">
           We invite you to visit our showroom and experience the DRA Jewelry difference. Our expert consultants are ready to guide you through our collections and help you find the perfect piece to celebrate life's most precious moments.
         </p>

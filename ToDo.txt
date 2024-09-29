@@ -32,4 +32,6 @@ To-Do List:
         - to add about us page story and also team members names and images
         - to modify texts/words/phrases
 
-- 
+- Attach links to social icons (!!)
+
+- (?) Improve contact page

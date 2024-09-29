@@ -7,7 +7,6 @@ import { ChevronDown, Menu, X, MessageCircle } from 'lucide-react';
 import { bannerData, specialtiesData, customDesignData } from './data';
 import Footer from '../components/footer';
 import ConsultationForm from '../components/requestConsultation';
-import AboutUs from './aboutus';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +44,7 @@ export default function HomePage() {
     (<div className="min-h-screen bg-white text-black">
       <motion.header
         style={{ opacity: 1 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-md shadow-md"
+        className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-99 backdrop-blur-md shadow-md"
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <button className="lg:hidden z-50" onClick={toggleMenu}>
@@ -71,7 +70,7 @@ export default function HomePage() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-gold transition-colors">
+                <a href="/contact" className="hover:text-gold transition-colors">
                   Contact
                 </a>
               </li>
@@ -119,7 +118,7 @@ export default function HomePage() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >

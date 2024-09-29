@@ -30,7 +30,7 @@ export default function RequestConsultation() {
   };
 
   return (
-    <div className="lg:w-1/2 bg-white p-8 rounded-lg shadow-xl relative">
+    <div className="bg-white p-8 rounded-lg shadow-xl relative">
       <h3 className="text-2xl font-serif mb-6 text-black">Request a Consultation</h3>
       <form onSubmit={onSubmit} className="space-y-4">
         <input
