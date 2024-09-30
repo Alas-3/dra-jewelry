@@ -75,7 +75,7 @@ export default function HomePage() {
                   href="/gallery"
                   className="hover:text-gold transition-colors"
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>
@@ -124,7 +124,7 @@ export default function HomePage() {
                   className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>

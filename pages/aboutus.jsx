@@ -98,7 +98,7 @@ export default function AboutUs() {
                   href="/gallery"
                   className="hover:text-gold transition-colors"
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>
@@ -147,7 +147,7 @@ export default function AboutUs() {
                   className="text-3xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>
@@ -174,7 +174,10 @@ export default function AboutUs() {
       </AnimatePresence>
 
       <main className="pt-20">
-        <section id="our-story" className="py-20 bg-white">
+        <section
+          id="our-story"
+          className="relative pt-5 pb-20 bg-white overflow-hidden"
+        >
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
               Our Story
@@ -188,16 +191,20 @@ export default function AboutUs() {
                 className="lg:w-1/2 mb-8 lg:mb-0"
               >
                 <p className="text-lg mb-6">
-                  Founded in 1950, DRA Jewelry Shop has been at the forefront of
-                  luxury jewelry craftsmanship for over seven decades. Our
-                  journey began with a simple yet profound vision: to create
-                  exquisite pieces that capture the essence of timeless
-                  elegance.
+                  DRA Jewelry Shop was born from a small, modest workshop in
+                  1950, where a young artisan’s passion for crafting fine
+                  jewelry sparked a vision for timeless elegance. With a deep
+                  respect for tradition and an unwavering commitment to quality,
+                  the shop quickly earned a reputation for creating pieces that
+                  combine delicate craftsmanship with luxurious design.
                 </p>
                 <p className="text-lg">
-                  From our humble beginnings in a small workshop to becoming a
-                  globally recognized brand, we have never wavered from our
-                  commitment to quality, innovation, and personalized service.
+                  Over the decades, DRA Jewelry grew into a globally recognized
+                  brand, yet it remains grounded in its roots of personalized
+                  service and artisanal expertise. Today, every piece from DRA
+                  continues to embody the original spirit of beauty, precision,
+                  and luxury that has defined the brand since its humble
+                  beginnings.
                 </p>
               </motion.div>
               <motion.div
@@ -205,19 +212,44 @@ export default function AboutUs() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="lg:w-1/2"
+                className="lg:w-1/2 relative"
               >
-                <img
-                  src="/placeholder.svg?height=400&width=600&text=Vintage+Workshop+Photo"
-                  alt="Vintage Workshop Photo"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
+                <div className="relative w-full max-w-sm mx-auto mb-8 lg:mt-0">
+                  {/* First Image */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative z-10 w-2/3 ml-auto"
+                  >
+                    <img
+                      src="../images/story1.png?height=225&width=300&text=Jewelry+Crafting+Process"
+                      alt="Jewelry Crafting Process"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                  </motion.div>
+                  {/* Second Image */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -20, x: 20 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="absolute top-1/2 -left-4 w-2/3"
+                  >
+                    <img
+                      src="../images/story2.png?height=300&width=400&text=Vintage+Workshop+Photo"
+                      alt="Vintage Workshop Photo"
+                      className="w-full h-auto rounded-lg mb-8 ml-5"
+                    />
+                  </motion.div>
+                </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        <section id="our-craft" className="py-20 bg-black text-white">
+        <section id="our-craft" className="mt-14 py-20 bg-black text-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
               Our Craft

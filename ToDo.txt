@@ -51,3 +51,5 @@ AS OF NOW LATEST:
     - story for the our story
     - team members for the meet our team
     - put images of previously made jewelries for the gallery page
+
+    - Finish up gallery page

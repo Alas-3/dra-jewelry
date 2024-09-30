@@ -18,28 +18,28 @@ const galleryItems = [
   },
   {
     id: 2,
-    src: "/placeholder.svg?height=400&width=600",
-    alt: "Bespoke Necklace",
+    src: "../images/gallery1.png?height=400&width=600",
+    alt: "Bespoke Ring",
   },
   {
     id: 3,
-    src: "../images/earrings-dra.png?height=400&width=600",
-    alt: "Unique Earrings",
+    src: "../images/gallery12.png?height=400&width=600",
+    alt: "Unique Bracelet",
   },
   {
     id: 4,
-    src: "/placeholder.svg?height=400&width=600",
-    alt: "Personalized Bracelet",
+    src: "../images/gallery3.png?height=400&width=600",
+    alt: "Personalized Ring",
   },
   {
     id: 5,
-    src: "../images/pendant3-dra.png?height=400&width=600",
-    alt: "Exclusive Pendant",
+    src: "../images/gallery10.png?height=400&width=600",
+    alt: "Ring & Earrings Set",
   },
   {
     id: 6,
-    src: "/placeholder.svg?height=400&width=600",
-    alt: "Custom Cufflinks",
+    src: "../images/gallery7.png?height=400&width=600",
+    alt: "Earrings & Pendant Set",
   },
 ];
 
@@ -132,7 +132,7 @@ const GalleryPage = () => {
                   href="/gallery"
                   className="hover:text-gold transition-colors"
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>
@@ -181,7 +181,7 @@ const GalleryPage = () => {
                   className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>

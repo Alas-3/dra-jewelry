@@ -76,7 +76,7 @@ export default function ContactPage() {
                   href="/gallery"
                   className="hover:text-gold transition-colors"
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Custom Design
+                  Gallery
                 </a>
               </li>
               <li>
