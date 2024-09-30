@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import CheckMark from './CheckMark'; // Update the path to your Lottie component
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import CheckMark from "./CheckMark"; // Update the path to your Lottie component
 
 export default function RequestConsultation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function RequestConsultation() {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
@@ -31,7 +31,9 @@ export default function RequestConsultation() {
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-xl relative">
-      <h3 className="text-2xl font-serif mb-6 text-black">Request a Consultation</h3>
+      <h3 className="text-2xl font-serif mb-6 text-black">
+        Request a Consultation
+      </h3>
       <form onSubmit={onSubmit} className="space-y-4">
         <input
           type="text"
@@ -88,9 +90,12 @@ export default function RequestConsultation() {
                   <CheckMark /> {/* Use the Lottie check mark here */}
                 </motion.div>
               </div>
-              <h3 className="text-2xl font-serif mb-4 text-black">Email Sent</h3>
+              <h3 className="text-2xl font-serif mb-4 text-black">
+                Email Sent
+              </h3>
               <p className="text-gray-600 mb-6">
-                Thank you for your interest. We'll be in touch with you shortly to discuss your dream piece.
+                Thank you for your interest. We'll be in touch with you shortly
+                to discuss your dream piece.
               </p>
               <button
                 onClick={() => setIsModalOpen(false)}

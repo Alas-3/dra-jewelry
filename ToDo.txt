@@ -43,3 +43,11 @@ To-Do List:
 - Homepage "Start your Journey"  button when clicked should go to scroll down to the "Request a Consultation" section
 
 - (?) Improve contact page
+
+
+AS OF NOW LATEST:
+
+    - need screenshots for Testimonials
+    - story for the our story
+    - team members for the meet our team
+    - put images of previously made jewelries for the gallery page
