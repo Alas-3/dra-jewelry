@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useTransform,
 } from "framer-motion";
+import { useSwipeable } from "react-swipeable";
 import { ChevronDown, Menu, X, MessageCircle } from "lucide-react";
 import { bannerData, specialtiesData, customDesignData } from "./data";
 import Footer from "../components/footer";
@@ -44,6 +46,44 @@ export default function HomePage() {
   }, [isMenuOpen]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const testimonials = [
+    {
+      name: "",
+      imageSrc: "/images/testimonial1.png",
+      alt: "First testimonial screenshot",
+    },
+    {
+      name: "",
+      imageSrc: "/images/testimonial2.png",
+      alt: "Second testimonial screenshot",
+    },
+    {
+      name: "",
+      imageSrc: "/images/testimonial3.png",
+      alt: "Third testimonial screenshot",
+    },
+  ];
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () =>
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length),
+    onSwipedRight: () =>
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + testimonials.length) % testimonials.length
+      ),
+  });
 
   return (
     <div className="min-h-screen bg-white text-black">
@@ -206,24 +246,26 @@ export default function HomePage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {specialtiesData.map((specialty, index) => (
-                <div key={specialty.name} className="group cursor-pointer">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={specialty.image}
-                      alt={specialty.name}
-                      className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white text-xl font-serif">
-                        Explore {specialty.name}
-                      </span>
+                <Link key={specialty.name} href="/gallery" passHref>
+                  <div className="group cursor-pointer">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={specialty.image}
+                        alt={specialty.name}
+                        className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-xl font-serif">
+                          Explore {specialty.name}
+                        </span>
+                      </div>
                     </div>
+                    <h3 className="text-xl font-serif mt-4 mb-2">
+                      {specialty.name}
+                    </h3>
+                    <p className="text-gray-600">{specialty.description}</p>
                   </div>
-                  <h3 className="text-xl font-serif mt-4 mb-2">
-                    {specialty.name}
-                  </h3>
-                  <p className="text-gray-600">{specialty.description}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -270,39 +312,81 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-serif mb-8">
+        <section className="py-12 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center">
               Client Testimonials
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Emily S.",
-                  text: "The attention to detail in my custom-designed necklace is simply breathtaking. It's a true work of art.",
-                },
-                {
-                  name: "Michael R.",
-                  text: "From concept to creation, the team at Luxe Jewels exceeded all my expectations. My fiancée adores her engagement ring!",
-                },
-                {
-                  name: "Sophia L.",
-                  text: "The craftsmanship is unparalleled. Each piece I've purchased feels like it was made just for me.",
-                },
-              ].map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2, duration: 0.8 }}
-                  className="bg-gray-100 p-6 rounded-lg"
+
+            {isMobile ? (
+              <div {...swipeHandlers} className="flex overflow-hidden relative">
+                <div
+                  className="flex transition-transform duration-300"
+                  style={{
+                    transform: `translateX(-${currentIndex * 100}%)`,
+                    width: `${testimonials.length * 100}%`,
+                  }}
                 >
-                  <p className="text-lg mb-4">"{testimonial.text}"</p>
-                  <p className="font-serif text-gold">{testimonial.name}</p>
-                </motion.div>
-              ))}
-            </div>
+                  {testimonials.map((testimonial, index) => (
+                    <div
+                      key={testimonial.name}
+                      className="w-full flex-shrink-0"
+                      style={{ width: "100%" }}
+                    >
+                      <div className="flex flex-col items-center">
+                        <div className="relative w-full aspect-[3/4] mb-4 rounded-lg overflow-hidden">
+                          <Image
+                            src={testimonial.imageSrc}
+                            alt={testimonial.alt}
+                            layout="fill"
+                            objectFit="contain"
+                            className="transition-transform duration-300 hover:scale-105"
+                          />
+                        </div>
+                        <p className="font-serif text-gold text-lg">
+                          {testimonial.name}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Pagination dots */}
+                <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-2">
+                  {testimonials.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`h-2 w-2 rounded-full ${
+                        currentIndex === index ? "bg-black" : "bg-gray-400"
+                      }`}
+                      style={{ transition: "background-color 0.3s" }}
+                    />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {testimonials.map((testimonial) => (
+                  <div
+                    key={testimonial.name}
+                    className="flex flex-col items-center"
+                  >
+                    <div className="relative w-full aspect-[3/4] mb-4 rounded-lg overflow-hidden ">
+                      <Image
+                        src={testimonial.imageSrc}
+                        alt={testimonial.alt}
+                        layout="fill"
+                        objectFit="contain"
+                        className="transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <p className="font-serif text-gold text-lg">
+                      {testimonial.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 

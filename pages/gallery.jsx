@@ -6,39 +6,47 @@ import {
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
-import { Menu, X, MessageCircle, MessageCircleMore, Palette, Hammer } from "lucide-react";
+import Image from "next/image";
+import {
+  Menu,
+  X,
+  MessageCircle,
+  MessageCircleMore,
+  Palette,
+  Hammer,
+} from "lucide-react";
 import CheckMark from "../components/CheckMark"; // Update the path to your Lottie component
 import Footer from "@/components/footer";
 
 const galleryItems = [
   {
     id: 1,
-    src: "../images/ring-dra.png?height=400&width=600",
+    src: "/images/gallery13.png?height=400&width=600",
     alt: "Custom Ring Design",
   },
   {
     id: 2,
-    src: "../images/gallery1.png?height=400&width=600",
+    src: "/images/gallery1.png?height=400&width=600",
     alt: "Bespoke Ring",
   },
   {
     id: 3,
-    src: "../images/gallery12.png?height=400&width=600",
+    src: "/images/gallery12.png?height=400&width=600",
     alt: "Unique Bracelet",
   },
   {
     id: 4,
-    src: "../images/gallery3.png?height=400&width=600",
+    src: "/images/gallery3.png?height=400&width=600",
     alt: "Personalized Ring",
   },
   {
     id: 5,
-    src: "../images/gallery10.png?height=400&width=600",
+    src: "/images/gallery10.png?height=400&width=600",
     alt: "Ring & Earrings Set",
   },
   {
     id: 6,
-    src: "../images/gallery7.png?height=400&width=600",
+    src: "/images/gallery7.png?height=400&width=600",
     alt: "Earrings & Pendant Set",
   },
 ];

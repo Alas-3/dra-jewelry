@@ -135,7 +135,7 @@ export default function AboutUs() {
               <li>
                 <Link
                   href="/"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)} // Still closing the menu on click
                 >
                   Home
@@ -144,7 +144,7 @@ export default function AboutUs() {
               <li>
                 <a
                   href="/gallery"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Gallery
@@ -153,7 +153,7 @@ export default function AboutUs() {
               <li>
                 <a
                   href="/aboutus"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
@@ -162,7 +162,7 @@ export default function AboutUs() {
               <li>
                 <a
                   href="/contact"
-                  className="text-3xl font-serif hover:text-gold transition-colors"
+                  className="text-2xl font-serif hover:text-gold transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
@@ -303,12 +303,12 @@ export default function AboutUs() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
+                { name: "Paolo Araniego", role: "Manager", image: "Paolo" },
                 {
                   name: "Emma Thompson",
                   role: "Lead Designer",
                   image: "Emma+Thompson",
                 },
-                { name: "Paolo Araniego", role: "Boss", image: "Paolo" },
                 {
                   name: "Michael Chen",
                   role: "Master Craftsman",
