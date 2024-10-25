@@ -70,6 +70,40 @@ export default function AboutUs() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const TeamMember = ({ name, role }) => {
+    const initials = name
+      .split(" ")
+      .map((n) => n[0])
+      .join("");
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center"
+      >
+        <div className="relative w-48 h-48 mx-auto mb-6">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full shadow-lg" />
+          <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
+            <span className="text-4xl font-serif text-primary">{initials}</span>
+          </div>
+        </div>
+        <h3 className="text-2xl font-serif mb-2 text-primary">{name}</h3>
+        <p className="text-muted-foreground font-light tracking-wide uppercase text-sm">
+          {role}
+        </p>
+      </motion.div>
+    );
+  };
+
+  const teamMembers = [
+    { name: "Paolo Araniego", role: "Manager" },
+    { name: "Emma Thompson", role: "Lead Designer" },
+    { name: "Michael Chen", role: "Master Craftsman" },
+  ];
+
   return (
     <div className="min-h-screen bg-white text-black">
       <motion.header
@@ -191,20 +225,21 @@ export default function AboutUs() {
                 className="lg:w-1/2 mb-8 lg:mb-0"
               >
                 <p className="text-lg mb-6">
-                  DRA Jewelry Shop was born from a small, modest workshop in
-                  1950, where a young artisan’s passion for crafting fine
-                  jewelry sparked a vision for timeless elegance. With a deep
-                  respect for tradition and an unwavering commitment to quality,
-                  the shop quickly earned a reputation for creating pieces that
-                  combine delicate craftsmanship with luxurious design.
-                </p>
+                  {" "}
+                  DRA Jewelry Shop embodies a passion for crafting exquisite
+                  jewelry that promises timeless elegance. With a dedication to
+                  quality and a respect for the artistry involved, the brand
+                  aims to create pieces that seamlessly blend intricate
+                  craftsmanship with luxurious design.{" "}
+                </p>{" "}
                 <p className="text-lg">
-                  Over the decades, DRA Jewelry grew into a globally recognized
-                  brand, yet it remains grounded in its roots of personalized
-                  service and artisanal expertise. Today, every piece from DRA
-                  continues to embody the original spirit of beauty, precision,
-                  and luxury that has defined the brand since its humble
-                  beginnings.
+                  {" "}
+                  Over the years, DRA Jewelry has grown into a recognized name
+                  in the industry, all while maintaining a commitment to
+                  personalized service and attention to detail. Today, each
+                  piece from DRA reflects a spirit of beauty and sophistication,
+                  continuing to uphold the ideals of quality and luxury that
+                  define the brand.{" "}
                 </p>
               </motion.div>
               <motion.div
@@ -296,41 +331,18 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section id="our-team" className="py-20 bg-white">
+        <section id="our-team" className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-primary">
               Meet Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { name: "Paolo Araniego", role: "Manager", image: "Paolo" },
-                {
-                  name: "Emma Thompson",
-                  role: "Lead Designer",
-                  image: "Emma+Thompson",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "Master Craftsman",
-                  image: "Michael+Chen",
-                },
-              ].map((member, index) => (
-                <motion.div
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {teamMembers.map((member) => (
+                <TeamMember
                   key={member.name}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2, duration: 0.8 }}
-                  className="text-center"
-                >
-                  <img
-                    src={`/placeholder.svg?height=300&width=300&text=${member.image}`}
-                    alt={member.name}
-                    className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-xl font-serif mb-2">{member.name}</h3>
-                  <p className="text-gray-600">{member.role}</p>
-                </motion.div>
+                  name={member.name}
+                  role={member.role}
+                />
               ))}
             </div>
           </div>

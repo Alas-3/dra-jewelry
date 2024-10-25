@@ -53,3 +53,10 @@ AS OF NOW LATEST:
     - put images of previously made jewelries for the gallery page
 
     - Finish up gallery page
+
+
+10/1:
+    - Story for the our story section
+    - team members name & img (if possible)
+    - Review all pages and sections and re-tailor texts/images/links if necessary
+    - Conduct a code review just for the individual pages for now (Code review for entire codebase soon)
