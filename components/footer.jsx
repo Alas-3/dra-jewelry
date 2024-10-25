@@ -25,7 +25,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#custom-design"
+                  href="/gallery"
                   className="hover:text-gold transition-colors"
                 >
                   Gallery
