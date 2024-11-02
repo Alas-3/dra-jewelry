@@ -10,6 +10,7 @@ export default function Home() {
           name="description"
           content="Crafting exquisite, custom-made jewelry for those who appreciate the finest things in life. Our passion for perfection shines through in every piece we create."
         />
+        <link rel="canonical" href="https://dra-jewelry.vercel.app/" />
     <meta name="google-site-verification" content="OBwTnzCJhtTRTGjraMYwzcyuh6-Q9XyE-bb0rxaAzOw" />
     </Head>
     <div>
