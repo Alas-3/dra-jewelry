@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dra-jewelry.vercel.app/
+
+# Sitemaps
+Sitemap: https://dra-jewelry.vercel.app/sitemap.xml
