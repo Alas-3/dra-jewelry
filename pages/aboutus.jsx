@@ -100,8 +100,6 @@ export default function AboutUs() {
 
   const teamMembers = [
     { name: "Paolo Araniego", role: "Manager" },
-    { name: "Emma Thompson", role: "Lead Designer" },
-    { name: "Michael Chen", role: "Master Craftsman" },
   ];
 
   return (
@@ -336,7 +334,7 @@ export default function AboutUs() {
             <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-primary">
               Meet Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-12">
               {teamMembers.map((member) => (
                 <TeamMember
                   key={member.name}
